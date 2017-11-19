@@ -12,6 +12,7 @@ ALLOWED_HOSTS = [
 PROJECT_APPS = [
     'member',
     'orm',
+    'login',
 ]
 
 REQUIRED_APPS = [
