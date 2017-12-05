@@ -21,8 +21,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     url(r'^member/', include('member.urls', namespace='member')),
-
-    url(r'^login/', include('login.urls', namespace='login')),
+    url(r'^', include('login.urls', namespace='login')),
+    url(r'^province/', include('province.urls', namespace='province')),
 ]
 
 urlpatterns +=  staticfiles_urlpatterns()

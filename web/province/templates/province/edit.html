@@ -1,0 +1,39 @@
+{% extends 'layout/dashboard/index.html' %}
+{% load bootstrap4 %} 
+{% block content %}
+<div class="content-wrapper">
+        <section class="content-header">
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-dashboard"></i> province</a></li>
+                    <li class="active">Template</li>
+                </ol>
+        </section>
+        <section class="content">            
+            <br>
+            <div class="box box-success ">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Add Province
+                            <small>Template</small>
+                        </h3>
+                        <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="box-body">
+                            <div class="col-md-7 col-sm-6">
+                                    <form method="POST" action="{% url 'province:update' %}">
+                                        {% csrf_token %} {% bootstrap_form form %} {{form.id}}
+                                        <div class="form-group">
+                                        <button class="btn btn-primary pull-right" style="margin-left: 8px;">Update <i class="fa fa-refresh"></i></button>
+                                        </div>
+                                    </form>
+                            </div>
+                    </div>
+                </div>
+        </section>
+</div>
+    
+{% endblock content %}
+
+

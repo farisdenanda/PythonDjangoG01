@@ -6,16 +6,23 @@ PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = 'e^r=(#ble-w)ji@_!a3otik+d=ht&#$=$aqwzmhx^on3c$e$ev'
 DEBUG = True
 ALLOWED_HOSTS = [
-
+    'localhost',
+    '127.0.0.1',
+    '10.10.1.117',
+    'faris.itec.loc',
 ]
 
 PROJECT_APPS = [
     'member',
     'orm',
     'login',
+    'province',
 ]
 
 REQUIRED_APPS = [
+    'material',
+    'material.frontend',
+    'material.admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -23,6 +30,8 @@ REQUIRED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    'bootstrap4',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
